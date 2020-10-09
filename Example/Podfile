@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'PSMeter_Example' do
+  pod 'PSMeter', :path => '../'
+
+  target 'PSMeter_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
