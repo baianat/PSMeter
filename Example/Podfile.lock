@@ -1,0 +1,27 @@
+PODS:
+  - GTProgressBar (0.3.3)
+  - Navajo-Swift (2.1.0)
+  - PSMeter (0.1.0):
+    - GTProgressBar
+    - Navajo-Swift
+
+DEPENDENCIES:
+  - PSMeter (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - GTProgressBar
+    - Navajo-Swift
+
+EXTERNAL SOURCES:
+  PSMeter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GTProgressBar: a480283ecb0ada50de16c71e634892826928f640
+  Navajo-Swift: 57b93e73efbfbf452433efbff04402de56beff51
+  PSMeter: 07b78fc4954e480993d939eb95ce828bc6150511
+
+PODFILE CHECKSUM: 072ecd57231dc032c16575aa140ba1fb0e48b7bd
+
+COCOAPODS: 1.9.3
