@@ -10,13 +10,12 @@ import Foundation
 import Navajo_Swift
 
 public protocol PasswordEstimator {
-    func estimatePassword(_ password:String) -> PasswordStrength
+    func estimatePassword(_ password: String) -> PasswordStrength
 }
 
-
-struct DefaultPasswordEstimator:PasswordEstimator {
+struct DefaultPasswordEstimator: PasswordEstimator {
     func estimatePassword(_ password: String) -> PasswordStrength {
-        
+
         if password.isEmpty {
             return .empty
         } else {
@@ -35,6 +34,5 @@ struct DefaultPasswordEstimator:PasswordEstimator {
             }
         }
     }
-    
-    
+
 }

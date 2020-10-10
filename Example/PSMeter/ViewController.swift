@@ -25,6 +25,5 @@ class ViewController: UIViewController {
         let password = sender as? UITextField
         psMeter.updateStrengthIndication(password: password?.text ?? "")
     }
-    
-}
 
+}

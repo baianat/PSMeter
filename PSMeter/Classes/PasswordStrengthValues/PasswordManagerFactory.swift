@@ -8,12 +8,9 @@
 
 import UIKit
 
-
-
 class PasswordManagerFactory {
-    
-    
-    static func create(forPassword password:String, with decorator:PStrengthViewStatesDecorator, using estimator:PasswordEstimator) -> BasePasswordManager {
+
+    static func create(forPassword password: String, with decorator: PStrengthViewStatesDecorator, using estimator: PasswordEstimator) -> BasePasswordManager {
         switch estimator.estimatePassword(password) {
         case .empty:
             return EmptyPasswordManager(decorator: decorator.emptyPasswordDecorator)
@@ -28,11 +25,9 @@ class PasswordManagerFactory {
         case .veryStrong:
             return VeryStrongStrengthPasswordManager(decorator: decorator.veryStrongPasswordDecorator)
         }
-        
+
     }
 }
-
-
 
 public enum PasswordStrength {
     case empty
