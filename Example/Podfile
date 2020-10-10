@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'PSMeter_Example' do
-  pod 'PSMeter', :path => '../'
+  pod 'PSMeter'
 
   
 end
