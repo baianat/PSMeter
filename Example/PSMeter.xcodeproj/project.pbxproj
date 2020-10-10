@@ -16,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04F24F3625323E9E00844054 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		04F24F3725323E9E00844054 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		05E294CCB04CFBDC927FAAB5 /* Pods-PSMeter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PSMeter_Example.debug.xcconfig"; path = "Target Support Files/Pods-PSMeter_Example/Pods-PSMeter_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		37BFB8A4F532B7D5F9D6A9C3 /* Pods-PSMeter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PSMeter_Example.release.xcconfig"; path = "Target Support Files/Pods-PSMeter_Example/Pods-PSMeter_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5CC1F843F06F1F0B1214BB24 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				English,
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
@@ -245,6 +248,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				607FACDA1AFB9204008FA782 /* Base */,
+				04F24F3625323E9E00844054 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -253,6 +257,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				607FACDF1AFB9204008FA782 /* Base */,
+				04F24F3725323E9E00844054 /* ar */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

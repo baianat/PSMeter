@@ -1,0 +1,6 @@
+"weak" = "ضعيف";
+"veryWeak" = "ضعيفة جدا";
+"fair" = "متوسطة";
+"strong" = "قوية";
+"veryStrong" = "قوية جدا";
+"passwordStrength" = "قوة كلمة السر";

@@ -18,7 +18,7 @@ public protocol PSMeterDelegate {
 
     // MARK: Public Attributes
 
-    @IBInspectable public var titleText: String = "Password Strength" {
+    @IBInspectable public var titleText: String = "passwordStrength".localized {
         didSet {
             self.strengthTitleLabel.text = titleText
         }

@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "E-mail"; ObjectID = "HDK-My-2Mj"; */
+"HDK-My-2Mj.text" = "E-mail";
+
+/* Class = "UILabel"; text = "Register"; ObjectID = "c7U-Z6-faF"; */
+"c7U-Z6-faF.text" = "Register";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "lDg-30-U6x"; */
+"lDg-30-U6x.normalTitle" = "Register";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "pWD-O9-eFn"; */
+"pWD-O9-eFn.text" = "Password";

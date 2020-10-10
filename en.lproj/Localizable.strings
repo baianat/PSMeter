@@ -1,0 +1,6 @@
+"weak" = "Weak";
+"veryWeak" = "Very Weak";
+"fair" = "Fair";
+"strong" = "Strong";
+"veryStrong" = "Very Strong";
+"passwordStrength" = "Password Strength";

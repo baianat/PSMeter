@@ -41,11 +41,11 @@ public struct PStrengthViewStatesDecorator {
     public static func defaultValues() -> PStrengthViewStatesDecorator {
         return PStrengthViewStatesDecorator(
             emptyPasswordDecorator: StateDecorator(text: "--", textColor: .gray, progressColor: .gray),
-            veryWeakPasswordDecorator: StateDecorator(text: "Very Weak", textColor: weakColor, progressColor: weakColor),
-            weakPasswordDecorator: StateDecorator(text: "Weak", textColor: weakColor, progressColor: weakColor),
-            fairPasswordDecorator: StateDecorator(text: "Fair", textColor: veryWeakColor, progressColor: veryWeakColor),
-            strongPasswordDecorator: StateDecorator(text: "Strong", textColor: strongColor, progressColor: strongColor),
-            veryStrongPasswordDecorator: StateDecorator(text: "Very Strong", textColor: veryStrongColor, progressColor: veryStrongColor))
+            veryWeakPasswordDecorator: StateDecorator(text: "veryWeak".localized, textColor: weakColor, progressColor: weakColor),
+            weakPasswordDecorator: StateDecorator(text: "weak".localized, textColor: weakColor, progressColor: weakColor),
+            fairPasswordDecorator: StateDecorator(text: "fair".localized, textColor: veryWeakColor, progressColor: veryWeakColor),
+            strongPasswordDecorator: StateDecorator(text: "strong".localized, textColor: strongColor, progressColor: strongColor),
+            veryStrongPasswordDecorator: StateDecorator(text: "veryStrong".localized, textColor: veryStrongColor, progressColor: veryStrongColor))
     }
 
 }
@@ -69,4 +69,10 @@ protocol ViewDecoratorProtocol {
     var title: String! {get set}
     var textColor: UIColor! {get set}
     var progressColor: UIColor! {get set}
+}
+
+extension String {
+    var localized: String {
+        return NSLocalizedString(self, tableName: nil, bundle: Bundle.init(for: PSMeter.self), value: "", comment: "")
+    }
 }
