@@ -55,7 +55,7 @@ This can easily be achieved in a couple of ways..
 
 ``` swift
 passwordTextField.rx.text.changed.subscribe(onNext: { (password) in
-self.psMeter.updateStrengthIndication(password: password ?? "")
+    self.psMeter.updateStrengthIndication(password: password ?? "")
 }).disposed(by: bag)
 ```
 
@@ -73,8 +73,8 @@ self.psMeter.updateStrengthIndication(password: password ?? "")
 2- Invoke `updateStrengthIndication` in that action.
 ``` swift
 @IBAction func passwordDidChange(_ sender: Any) {
-let password = passwordTextField.text ?? ""
-psMeter.updateStrengthIndication(password: password)
+    let password = passwordTextField.text ?? ""
+    psMeter.updateStrengthIndication(password: password)
 }
 ```
 
@@ -93,10 +93,10 @@ You can customize `PSMeter` for these attributes:
 **Example:**
 ``` swift
 override func viewDidLoad() {
-...
-psMeter.titleText = "Password Robustness"
-psMeter.tintColor = .red
-psMeter.font = UIFont.boldSystemFont(ofSize: 14)
+    ...
+    psMeter.titleText = "Password Robustness"
+    psMeter.tintColor = .red
+    psMeter.font = UIFont.boldSystemFont(ofSize: 14)
 }
 ```
 
@@ -117,12 +117,12 @@ The default `PStrengthViewStatesDecorator` is implemented as follows...
 
 ``` swift
 let defaultStatesDecorator =  PStrengthViewStatesDecorator(
-emptyPasswordDecorator:StateDecorator(text: "--", textColor: .gray, progressColor: .gray),
-veryWeakPasswordDecorator: StateDecorator(text: "Very Weak", textColor: .red, progressColor: .red),
-weakPasswordDecorator: StateDecorator(text: "Weak", textColor: .orange, progressColor: .orange),
-fairPasswordDecorator: StateDecorator(text: "Fair", textColor: .yellow, progressColor: .yellow),
-strongPasswordDecorator: StateDecorator(text: "Strong", textColor: .green, progressColor: .green),
-veryStrongPasswordDecorator: StateDecorator(text: "Very Strong", textColor: .blue, progressColor: .blue)
+    emptyPasswordDecorator:StateDecorator(text: "--", textColor: .gray, progressColor: .gray),
+    veryWeakPasswordDecorator: StateDecorator(text: "Very Weak", textColor: .red, progressColor: .red),
+    weakPasswordDecorator: StateDecorator(text: "Weak", textColor: .orange, progressColor: .orange),
+    fairPasswordDecorator: StateDecorator(text: "Fair", textColor: .yellow, progressColor: .yellow),
+    strongPasswordDecorator: StateDecorator(text: "Strong", textColor: .green, progressColor: .green),
+    veryStrongPasswordDecorator: StateDecorator(text: "Very Strong", textColor: .blue, progressColor: .blue)
 )
 psMeter.statesDecorator = defaultStatesDecorator
 ```
@@ -133,16 +133,16 @@ You can observe for whenever the password strength changes, just set the the del
 ``` swift
 ...
 override func viewDidLoad() {
-super.viewDidLoad()
-...
-psMeter.delegate = self
-}
+    super.viewDidLoad()
+        ...
+        psMeter.delegate = self
+    }
 }
 
 extension ViewController : PSMeterDelegate {
-func psMeter(_ psMeter: PSMeter, didChangeStrength passwordStrength: PasswordStrength) {
+    func psMeter(_ psMeter: PSMeter, didChangeStrength passwordStrength: PasswordStrength) {
 
-}
+    }
 }
 ```
 Alternatively, you can get the current password strength using `passwordStrength` on `PSMeter` as follows...
@@ -156,27 +156,27 @@ Either way passwordStrength is of type `PasswordStrength` enum that can have on 
 ``` swift
 let currentStrength = psMeter.passwordStrength
 switch currentStrength {
-case .empty:
-print("empty")
-case .veryWeak:
-print("veryWeak")
-case .weak:
-print("weak")
-case .fair:
-print("fair")
-case .strong:
-print("strong")
-case .veryStrong:
-print("veryStrong")
-default:
-break
+    case .empty:
+        print("empty")
+    case .veryWeak:
+        print("veryWeak")
+    case .weak:
+        print("weak")
+    case .fair:
+        print("fair")
+    case .strong:
+        print("strong")
+    case .veryStrong:
+        print("veryStrong")
+    default:
+        break
 }
 ```
 
 ### Password Strength Algorithm:
 
 #### Default Algorithm:
-The default algorithm for determing password strength is based on [Navajo-Swift](https://github.com/jasonnam/Navajo-Swift) by @jasonnam.
+The default algorithm for determining password strength is based on [Navajo-Swift](https://github.com/jasonnam/Navajo-Swift) by @jasonnam.
 
 #### Custom Algorithm:
 You can easily altar the algorithm defining how password strength is estimated, just set `passwordEstimator` on `PSMeter` and implement `PasswordEstimator` as follows...
@@ -186,19 +186,19 @@ You can easily altar the algorithm defining how password strength is estimated, 
 ``` swift
 ...
 override func viewDidLoad() {
-...
-psMeter.passwordEstimator = self
-}
+        ...
+        psMeter.passwordEstimator = self
+    }
 }
 
 extension ViewController : PasswordEstimator {
-func estimatePassword(_ password: String) -> PasswordStrength {
-if password.count = 8 {
-return .weak
-}else {
-return .fair
-}
-}
+    func estimatePassword(_ password: String) -> PasswordStrength {
+        if password.count = 8 {
+            return .weak
+        }else {
+            return .fair
+        }
+    }
 }
 ```
 
