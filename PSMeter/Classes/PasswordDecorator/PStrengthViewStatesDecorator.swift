@@ -41,9 +41,9 @@ public struct PStrengthViewStatesDecorator {
     public static func defaultValues() -> PStrengthViewStatesDecorator {
         return PStrengthViewStatesDecorator(
             emptyPasswordDecorator: StateDecorator(text: "--", textColor: .gray, progressColor: .gray),
-            veryWeakPasswordDecorator: StateDecorator(text: "veryWeak".localized, textColor: weakColor, progressColor: weakColor),
+            veryWeakPasswordDecorator: StateDecorator(text: "veryWeak".localized, textColor: veryWeakColor, progressColor: veryWeakColor),
             weakPasswordDecorator: StateDecorator(text: "weak".localized, textColor: weakColor, progressColor: weakColor),
-            fairPasswordDecorator: StateDecorator(text: "fair".localized, textColor: veryWeakColor, progressColor: veryWeakColor),
+            fairPasswordDecorator: StateDecorator(text: "fair".localized, textColor: fairColor, progressColor: fairColor),
             strongPasswordDecorator: StateDecorator(text: "strong".localized, textColor: strongColor, progressColor: strongColor),
             veryStrongPasswordDecorator: StateDecorator(text: "veryStrong".localized, textColor: veryStrongColor, progressColor: veryStrongColor))
     }
